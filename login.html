@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login | ZYNTRA AI Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<section class="login-page">
+
+    <img src="New folder/WhatsApp Image 2026-08-02 at 7.01.15 PM.jpeg" alt="ZYNTRA Logo" class="logo">
+
+    <h1>Admin Login</h1>
+
+    <p>Login to access the Admin Dashboard</p>
+
+    <div class="login-box">
+
+        <input
+            id="username"
+            type="text"
+            placeholder="Username">
+
+        <input
+            id="password"
+            type="password"
+            placeholder="Password">
+
+        <button class="login-btn" onclick="login()">
+            Login
+        </button>
+
+<p id="error-message"></p>
+
+    </div>
+
+</section>
+
+<script>
+
+function login(){
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    if(username === "admin" && password === "123456"){
+
+        window.location.href = "dashboard.html";
+
+    }else{
+
+        alert("Wrong Username or Password!");
+
+    }
+
+}
+
+</script>
+
+</body>
+
+<script>
+
+const adminUsername = "Faroukkk_373";
+const adminPassword = "MAROOOOOOO";
+
+function login(){
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const error = document.getElementById("error-message");
+
+    if(username === adminUsername && password === adminPassword){
+
+        window.location.href = "dashboard.html";
+
+    }else{
+
+        error.innerHTML = "❌ Incorrect username or password.";
+    }
+
+}
+
+</script>
+
+
+</html>
